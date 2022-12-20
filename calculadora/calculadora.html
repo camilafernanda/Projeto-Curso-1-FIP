@@ -59,6 +59,16 @@
             taxaJuros = Number(taxaJuros);
             periodo = Number(periodo);
 
+            let modeloPeriodo = document.querySelector('#modelo_periodo').value;
+            if (modeloPeriodo == 'anos') {
+                periodo = periodo * 12;
+            }
+
+            let modeloTaxa = document.querySelector('#modelo_taxa_juros').value;
+            if (modeloTaxa == 'anual') {
+                taxaJuros = taxaJuros / 12;
+            }
+
             let resumoValorInvestido = document.querySelector('#total_investido');
             resumoValorInvestido.textContent = 'R$ ' + valorInvestido;
 

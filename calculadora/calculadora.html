@@ -35,7 +35,10 @@
 
     <script>
         function realizarCalculo() {
-            document.write("O valor que você irá receber é: ");
+            let valorInvestido = document.querySelector('#valor_investido').valueAsNumber;
+            let taxaJuros = document.querySelector('#taxa_juros').valueAsNumber / 100;
+            let periodo = document.querySelector('#periodo').valueAsNumber;
+
         }
     </script>
 </body>

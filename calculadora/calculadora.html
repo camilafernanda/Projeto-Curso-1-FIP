@@ -33,6 +33,22 @@
         <input type="button" value="Calcular" onclick="realizarCalculo()">
     </form>
 
+    <h2>Resultado</h2>
+    <table>
+        <tr>
+            <td>Valor investido</td>
+            <td id="total_investido">R$0,00</td>
+        </tr>
+        <tr>
+            <td>Valor dos juros</td>
+            <td id="total_juros">R$0,00</td>
+        </tr>
+        <tr>
+            <td>Montante final</td>
+            <td id="total">R$0,00</td>
+        </tr>
+    </table>
+
     <script>
         function realizarCalculo() {
             let valorInvestido = document.querySelector('#valor_investido').valueAsNumber;

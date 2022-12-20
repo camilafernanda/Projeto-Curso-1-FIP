@@ -51,10 +51,12 @@
 
     <script>
         function realizarCalculo() {
-            let valorInvestido = document.querySelector('#valor_investido').valueAsNumber;
-            let taxaJuros = document.querySelector('#taxa_juros').valueAsNumber / 100;
-            let periodo = document.querySelector('#periodo').valueAsNumber;
+            let valorInvestido = document.querySelector('#valor_investido').value;
+            let taxaJuros = document.querySelector('#taxa_juros').value;
+            let periodo = document.querySelector('#periodo').value;
 
+            let resumoValorInvestido = document.querySelector('#total_investido');
+            resumoValorInvestido.textContent = 'R$ ' + valorInvestido;
         }
     </script>
 </body>

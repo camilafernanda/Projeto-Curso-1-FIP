@@ -55,8 +55,18 @@
             let taxaJuros = document.querySelector('#taxa_juros').value;
             let periodo = document.querySelector('#periodo').value;
 
+            valorInvestido = Number(valorInvestido);
+            taxaJuros = Number(taxaJuros);
+            periodo = Number(periodo);
+
             let resumoValorInvestido = document.querySelector('#total_investido');
             resumoValorInvestido.textContent = 'R$ ' + valorInvestido;
+
+            let montante = valorInvestido * ((1 + taxaJuros) ** periodo);
+            let jurosCompostos = montante - valorInvestido;
+
+            console.log(montante);
+            console.log(jurosCompostos);
         }
     </script>
 </body>

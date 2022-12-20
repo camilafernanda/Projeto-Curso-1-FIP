@@ -71,19 +71,16 @@
             }
 
             let resumoValorInvestido = document.querySelector('#total_investido');
-            resumoValorInvestido.textContent = 'R$ ' + valorInvestido;
+            resumoValorInvestido.textContent = 'R$ ' + parseFloat(valorInvestido.toFixed(2)).toLocaleString('PT');
 
             let montante = valorInvestido * ((1 + taxaJuros) ** periodo);
             let jurosCompostos = montante - valorInvestido;
 
-            // console.log(montante);
-            // console.log(jurosCompostos);
-
             let resumoTotalJuros = document.querySelector('#total_juros');
-            resumoTotalJuros.textContent = 'R$ ' + jurosCompostos;
+            resumoTotalJuros.textContent = 'R$ ' + parseFloat(jurosCompostos.toFixed(2)).toLocaleString('PT');
 
             let resumoTotalMontante = document.querySelector('#total');
-            resumoTotalMontante.textContent = 'R$ ' + montante;
+            resumoTotalMontante.textContent = 'R$ ' + parseFloat(montante.toFixed(2)).toLocaleString('PT');
         }
     </script>
 </body>
